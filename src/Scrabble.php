@@ -15,7 +15,7 @@
 
 				function wordCount()
 				{
-					$ones = array('A', 'E', 'I', 'O', 'L', 'N', 'R', 'S', 'T');
+					$ones = array('A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T');
 					$twos = array('D', 'G');
 					$threes = array('B', 'C', 'M', 'P');
 					$fours = array('F', 'H', 'V', 'W', 'Y');
@@ -27,7 +27,7 @@
 					$str_array = str_split($upper_word);
 					$value = 0;
 
-					foreach($str_array as $key => $letter) {
+					foreach($str_array as $letter) {
 						if(in_array($letter, $ones)) {
 							 $value += 1;
 						} elseif(in_array($letter, $twos)) {
@@ -40,7 +40,7 @@
 							$value += 5;
 						} elseif(in_array($letter, $eights)) {
 							$value += 8;
-						} else {
+						} elseif(in_array($letter, $tens)) {
 							$value += 10;
 						}
 					} return $value;
