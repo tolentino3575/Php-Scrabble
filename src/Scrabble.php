@@ -23,7 +23,8 @@
 					$eights = array('J', 'X');
 					$tens = array('Q', 'Z');
 
-					$str_array = str_split($this->word);
+					$upper_word = strtoupper($this->word);
+					$str_array = str_split($upper_word);
 					$value = 0;
 
 					foreach($str_array as $key => $letter) {
