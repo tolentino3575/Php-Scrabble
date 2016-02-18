@@ -70,6 +70,44 @@
 		$this->assertEquals('14', $result);
 		}
 
+		function test_count_word_includefives()
+		{
+		//Arrange
+		$input = 'MILK';
+		$test_Scrabble = new Scrabble($input);
+
+		//Act
+		$result = $test_Scrabble->wordCount();
+
+		//Assert
+		$this->assertEquals('10', $result);
+		}
+
+		function test_count_word_includeeights()
+		{
+		//Arrange
+		$input = 'JAX';
+		$test_Scrabble = new Scrabble($input);
+
+		//Act
+		$result = $test_Scrabble->wordCount();
+
+		//Assert
+		$this->assertEquals('17', $result);
+		}
+
+		function test_count_word_includetens()
+		{
+		//Arrange
+		$input = 'ZAQ';
+		$test_Scrabble = new Scrabble($input);
+
+		//Act
+		$result = $test_Scrabble->wordCount();
+
+		//Assert
+		$this->assertEquals('21', $result);
+		}
 
 	}
 

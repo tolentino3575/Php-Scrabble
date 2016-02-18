@@ -19,6 +19,9 @@
 					$twos = array('D', 'G');
 					$threes = array('B', 'C', 'M', 'P');
 					$fours = array('F', 'H', 'V', 'W', 'Y');
+					$fives = array('K');
+					$eights = array('J', 'X');
+					$tens = array('Q', 'Z');
 
 					$str_array = str_split($this->word);
 					$value = 0;
@@ -32,6 +35,12 @@
 							$value += 3;
 						} elseif(in_array($letter, $fours)){
 							$value += 4;
+						} elseif(in_array($letter, $fives)) {
+							$value += 5;
+						} elseif(in_array($letter, $eights)) {
+							$value += 8;
+						} else {
+							$value += 10;
 						}
 					} return $value;
 
