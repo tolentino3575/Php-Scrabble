@@ -21,14 +21,14 @@
 		function test_count_word_ones()
 		{
 		//Arrange
-		$input = 'BEOWULF';
+		$input = 'A';
 		$test_Scrabble = new Scrabble($input);
 
 		//Act
 		$result = $test_Scrabble->wordCount();
 
 		//Assert
-		$this->assertEquals('3', $result);
+		$this->assertEquals('1', $result);
 		}
 
 		function test_count_word_includetwos()
@@ -43,6 +43,34 @@
 		//Assert
 		$this->assertEquals('5', $result);
 		}
+
+		function test_count_word_includethrees()
+		{
+		//Arrange
+		$input = 'CAMP';
+		$test_Scrabble = new Scrabble($input);
+
+		//Act
+		$result = $test_Scrabble->wordCount();
+
+		//Assert
+		$this->assertEquals('10', $result);
+		}
+
+		function test_count_word_includefours()
+		{
+		//Arrange
+		$input = 'CHAMP';
+		$test_Scrabble = new Scrabble($input);
+
+		//Act
+		$result = $test_Scrabble->wordCount();
+
+		//Assert
+		$this->assertEquals('14', $result);
+		}
+
+
 	}
 
 ?>
